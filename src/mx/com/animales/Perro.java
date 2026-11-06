@@ -1,4 +1,12 @@
 package mx.com.animales;
 
-public class Perro {
+public class Perro extends Animal {
+    public Perro(String nombre, int edad){
+        super(nombre, edad);
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println("Wuau Wuau");
+    }
 }
