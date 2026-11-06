@@ -5,15 +5,18 @@ public class Main {
         Animal[] animales = {
                 new Perro("Firulais", 2),
                 new Gato("Michi", 4),
-                new Vaca("Lola", 5)
+                new Vaca("Lola", 5),
+                new Caballo("Pepe", 3)
         };
 
         for (Animal animal: animales){
             animal.mostrarInfromacion();
             animal.hacerSonido();
 
-            Movible m = (Movible) animal;
-            m.moverse();
+            if (animal instanceof Movible) {
+                Movible m = (Movible) animal;
+                m.moverse();
+            }
             System.out.println("\n");
         }
     }
